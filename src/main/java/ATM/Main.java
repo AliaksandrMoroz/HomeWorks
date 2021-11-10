@@ -15,7 +15,7 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
         List<Person> personList=new ArrayList<>();
-        personList.add(new Person("Alex",1,1,5000));
+        personList.add(new Person("Alex",12341234,4321,5000));
         personList.add(new Person("Hanna",23452345,5432,300));
         personList.add(new Person("Kira",34563456,6543,700));
 

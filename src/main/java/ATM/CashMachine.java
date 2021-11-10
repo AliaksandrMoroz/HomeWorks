@@ -66,18 +66,15 @@ public class CashMachine {
             int personCartNumber = userInput();
             identification(personCartNumber);
     }
-    public  Integer userInput(){
+    public int userInput(){
         Scanner scanner = new Scanner(System.in);
-        try{
-            int input =Integer.parseInt(new String(scanner.nextLine()));
+        if(scanner.hasNextInt()){
+            int input = scanner.nextInt();
             return input;
-        }catch (NumberFormatException exception){
+        }else{
             System.out.println("Incorrect data entered, please try again.");
-            userInput();
-        }
-        int input =Integer.parseInt(new String(scanner.nextLine()));
-        return input;
-
+            scanner.nextLine();
+            }return userInput();
     }
     public  void identification(int personCartNumber){
 
@@ -87,7 +84,7 @@ public class CashMachine {
 
                     int personPin = userInput();
                     if(personPin==people.get(i).getPin()){
-                        System.out.println("Welcome"+people.get(i).getName());
+                        System.out.println("Welcome "+people.get(i).getName());
                         operationMenu(people.get(i));
                     }else{
                         count++;
