@@ -11,14 +11,15 @@ public class Main {
         List<Integer> list = new LinkedList<>();
 
         for (int i = 0; i < 50; i++) {
-            list.add((int) (-15 + Math.random() * 10));
+
             list.add((int) (Math.random() * 10));
         }
         System.out.println(list);
         for (int i = 0; i < list.size(); i++) {
 
-            if(list.get(i)<0){
+            if(list.get(i)<4){
                 list.remove(i);
+                i--;
         }
             }
         System.out.println(list);

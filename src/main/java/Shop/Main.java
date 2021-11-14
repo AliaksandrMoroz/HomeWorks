@@ -37,17 +37,20 @@ package Shop;
 //        •редактируем один товар
 //        •получаем список товаров и выводим в консоль
 
-import java.util.Arrays;
-
 public class Main {
     public static void main(String[] args) {
     Market market = new Market();
-    Product iPhone = new Product("iPhone 12", 1000);
-    Product iPad = new Product("iPad", 900);
-    Product macBook = new Product("MacBook Air", 1150);
-    market.addProduct(iPad);
-    market.addProduct(iPhone);
-    market.addProduct(macBook);
-        System.out.println(market);
+    market.productList.add(new Product("iPhone 12", 1000));
+    market.productList.add(new Product("iPad", 900));
+    market.productList.add(new Product("MacBook Air", 1150));
+    market.productList.add(new Product("MacBook pro",2000));
+    market.productList.add(new Product("MacBook proM1",2500));
+    
+        market.allProductList();
+
+
+
+
+
     }
 }
